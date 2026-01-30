@@ -15,9 +15,9 @@ def get_weather() -> None:
     result = requests.get(URL + f"q={FILTERING}&key={KEY}")
     data = result.json()
     print(
-        f"{data["location"]["name"]}/{data["location"]["country"]} "
-        f"{data["location"]["localtime"]}\n"
-        f"Weather: {data["current"]["temp_c"]}°C, "
+        f"{data['location']['name']}/{data['location']['country']} "
+        f"{data['location']['localtime']}\n"
+        f"Weather: {data['current']['temp_c']}°C, "
         + data["current"]["condition"]["text"]
     )
 
